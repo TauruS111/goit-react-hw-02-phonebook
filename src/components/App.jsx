@@ -54,6 +54,7 @@ class App extends Component {
           <ContactForm onSubmit={this.handleAddContact} />
         </div>
         <h2>Contacts</h2>
+        <h4>Find contacts by name</h4>
         <Filter filter={this.state.filter} onChange={this.handleFilterChange} />
         <ContactList
           contacts={filteredContacts}

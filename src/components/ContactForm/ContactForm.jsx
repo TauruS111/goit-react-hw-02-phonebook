@@ -20,6 +20,7 @@ class ContactForm extends React.Component {
   render() {
     return (
       <form className="contact" onSubmit={this.handleSubmit}>
+        <h3>Name</h3>
         <input
           className="inpute"
           type="text"
@@ -29,6 +30,7 @@ class ContactForm extends React.Component {
           required
           placeholder="Name"
         />
+        <h3>Number</h3>
         <input
           className="inpute"
           type="tel"
