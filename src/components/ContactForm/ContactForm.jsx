@@ -1,6 +1,7 @@
 import React from 'react';
+import css from './ContactForm.module.css';
 
-class ContactForm extends React.Component {
+export class ContactForm extends React.Component {
   state = {
     name: '',
     number: '',
@@ -19,10 +20,10 @@ class ContactForm extends React.Component {
 
   render() {
     return (
-      <form className="contact" onSubmit={this.handleSubmit}>
+      <form className={css.contact} onSubmit={this.handleSubmit}>
         <h3>Name</h3>
         <input
-          className="inpute"
+          className={css.inpute}
           type="text"
           name="name"
           value={this.state.name}
@@ -32,7 +33,7 @@ class ContactForm extends React.Component {
         />
         <h3>Number</h3>
         <input
-          className="inpute"
+          className={css.inpute}
           type="tel"
           name="number"
           value={this.state.number}
@@ -40,12 +41,10 @@ class ContactForm extends React.Component {
           required
           placeholder="Phone number"
         />
-        <button className="add" type="submit">
+        <button className={css.add} type="submit">
           Add contact
         </button>
       </form>
     );
   }
 }
-
-export default ContactForm;

@@ -1,4 +1,4 @@
-const Filter = ({ filter, onChange }) => (
+export const Filter = ({ filter, onChange }) => (
   <input
     type="text"
     value={filter}
@@ -6,5 +6,3 @@ const Filter = ({ filter, onChange }) => (
     placeholder="Search contacts"
   />
 );
-
-export default Filter;

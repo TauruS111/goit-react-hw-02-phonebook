@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
-import ContactForm from './ContactForm/ContactForm';
-import ContactList from './ContactList/ContactList';
-import Filter from './Filter/Filter';
+import { Component } from 'react';
 import { nanoid } from 'nanoid';
 
-class App extends Component {
+import { ContactForm } from './ContactForm/ContactForm';
+import { ContactList } from './ContactList/ContactList';
+import { Filter } from './Filter/Filter';
+
+export class App extends Component {
   state = {
     contacts: [],
     filter: '',
@@ -64,5 +65,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;
