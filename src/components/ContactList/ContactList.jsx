@@ -2,10 +2,12 @@ import React from 'react';
 import css from './ContactList.module.css';
 
 export const ContactList = ({ contacts, onDelete }) => (
-  <ul>
+  <ul className={css.item}>
     {contacts.map(contact => (
-      <li key={contact.id}>
-        {contact.name} : {contact.number}
+      <li className={css.list} key={contact.id}>
+        <div className={css.block}>
+          {contact.name} : {contact.number}
+        </div>
         <button className={css.delete} onClick={() => onDelete(contact.id)}>
           Delete
         </button>
